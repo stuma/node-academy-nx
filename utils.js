@@ -1,9 +1,9 @@
 const fs = require('fs')
 
-const createTable = async () => {
+const createTable = async (base) => {
     let content = ''
     for(var i = 1; i <= 10; i++) {
-        content = `${content}5 x ${i} = ${5*i} \n`
+        content = `${content}${base} x ${i} = ${base*i} \n`
     }
     fs.writeFile('output.txt', content, err => {
         if (err) {
@@ -11,6 +11,7 @@ const createTable = async () => {
             return
         }
         console.log('file written successfully')
+        console.log(content)
     })
 }
 
