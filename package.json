@@ -1,0 +1,19 @@
+{
+  "name": "academy-nx",
+  "version": "1.0.0",
+  "description": "Naranja X Node.js Academy",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuma/node-academy-nx.git"
+  },
+  "author": "Sebastián Tuma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stuma/node-academy-nx/issues"
+  },
+  "homepage": "https://github.com/stuma/node-academy-nx#readme"
+}
