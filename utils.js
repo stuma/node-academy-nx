@@ -1,4 +1,5 @@
 const fs = require('fs')
+var colors = require('colors')
 
 const createTable = async (base) => {
     let content = ''
@@ -7,11 +8,11 @@ const createTable = async (base) => {
     }
     fs.writeFile('output.txt', content, err => {
         if (err) {
-            console.error(err)
+            console.error(err.red)
             return
         }
         console.log('file written successfully')
-        console.log(content)
+        console.log(content.rainbow)
     })
 }
 

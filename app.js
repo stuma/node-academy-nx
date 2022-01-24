@@ -1,4 +1,5 @@
 const { createTable } = require("./utils")
+var colors = require('colors')
 
 // aseguro la cantidad de argumentos correcta
 if(process.argv.length === 3) {

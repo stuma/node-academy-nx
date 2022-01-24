@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/stuma/node-academy-nx/issues"
   },
-  "homepage": "https://github.com/stuma/node-academy-nx#readme"
+  "homepage": "https://github.com/stuma/node-academy-nx#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
