@@ -1,32 +1,16 @@
 const { createTable } = require("./utils")
 var colors = require('colors')
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
 
-// aseguro la cantidad de argumentos correcta
-if(process.argv.length === 3) {
-    let base = process.argv[2]
-
-    // valido que el argumento sea válido
-    if(base.length > 7) {
-        // selecciono el número desde donde debe ser correcto el parámetro
-        base = parseInt(base.slice(7), 10)
-        // valido que el argumento ingresado sea un número
-        
-        if(!isNaN(base)) {
-            createTable(base)
-            .catch( err => {
-                console.log(err)
-            })
-        }
-        else{
-            console.log("El argumento ingresado no es un número")
-        }
-
-    }
-    else {
-        console.log("El argumento ingresado no es válido")
-    }
-
+// aseguro que el argumento ingresado sea correcto
+if (argv.base && typeof argv.base === 'number') {
+    createTable(argv.base)
+        .catch(err => {
+            console.log(err)
+        })
 } else {
-    console.log("Cantidad incorrecta de argumentos")
+    console.log("Argumento inválido")
 }
 

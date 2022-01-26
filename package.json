@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stuma/node-academy-nx#readme",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.3.1"
   }
 }
