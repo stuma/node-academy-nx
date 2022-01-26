@@ -1,7 +1,7 @@
 const fs = require('fs')
 var colors = require('colors')
 
-const createTable = async (base) => {
+const createTable = async (base, listar) => {
     let content = ''
     for(var i = 1; i <= 10; i++) {
         content = `${content}${base} x ${i} = ${base*i} \n`
@@ -12,7 +12,10 @@ const createTable = async (base) => {
             return
         }
         console.log('file written successfully')
-        console.log(content.rainbow)
+
+        // si me envían el parámetro para listar, arrojo el console log
+        // por default esta en false
+        if(listar) console.log(content.rainbow)
     })
 }
 
