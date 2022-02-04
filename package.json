@@ -19,5 +19,8 @@
   "dependencies": {
     "colors": "^1.4.0",
     "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0"
   }
 }
